@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #181a1b;
+}
+
+#grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#grid-container > div:nth-child(17n + 1) {
+  width: 100%;
+  border: 0;
+  height: 0;
+}
+
+#grid-container > div {
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+  transition: background-color 0.3s ease;
+}
+
+/* #grid-container > div:hover {
+  background-color: red;
+} */

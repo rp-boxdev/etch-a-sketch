@@ -1,0 +1,1 @@
+This project utilizes skills learned in previous lessons, utilizing DOM and CSS manipulation
