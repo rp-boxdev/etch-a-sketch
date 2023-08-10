@@ -5,26 +5,38 @@
 body {
   background-color: #181a1b;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-#grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 50px;
-  max-width: 650px;
+#grid-button {
+  max-width: 90px;
+  margin: 50px auto 20px;
+  padding: 7px;
+  border: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+#grid-button:hover {
+  background-color: rgb(206, 206, 206);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  /* gap: 2px; */
+  width: 600px;
+  height: 600px;
   border: 5px solid black;
 }
 
-#grid-container > div:nth-child(17n + 1) {
-  width: 100%;
-  border: 0;
-  height: 0;
+.grid-item {
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
 }
 
-#grid-container > div {
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-  transition: background-color 0.3s ease;
+.grid-item.active {
+  background-color: red;
 }
