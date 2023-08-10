@@ -1,24 +1,24 @@
 const gridContainer = document.querySelector(".grid-container");
 const gridButton = document.getElementById("grid-button");
-const numSquaresInput = document.getElementById("numSquares");
+const gridSizeInput = document.getElementById("gridSize");
 let isDragging = false;
 
 gridButton.addEventListener("click", createGrid);
 
 function createGrid() {
-  const numSquares = parseInt(numSquaresInput.value);
+  const gridSize = parseInt(gridSizeInput.value);
 
-  if (numSquares <= 0 || numSquares > 100) {
+  if (gridSize <= 0 || gridSize > 100) {
     alert("Please enter a valid number between 1 and 100.");
     return;
   }
 
   gridContainer.innerHTML = ""; // Clear existing grid
 
-  gridContainer.style.gridTemplateColumns = `repeat(${numSquares}, 1fr)`;
-  gridContainer.style.gridTemplateRows = `repeat(${numSquares}, 1fr)`;
+  gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+  gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-  for (let i = 0; i < numSquares * numSquares; i++) {
+  for (let i = 0; i < gridSize * gridSize; i++) {
     const gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
     gridContainer.appendChild(gridItem);

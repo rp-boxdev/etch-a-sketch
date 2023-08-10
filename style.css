@@ -19,17 +19,19 @@ body {
 }
 
 .controls input {
-  max-width: 12%;
+  max-width: 18%;
+  font-size: 18px;
 }
 
-.numSquares {
+.gridSize {
   color: white;
+  font-size: 18px;
 }
 
 #grid-button {
-  padding: 7px;
+  padding: 5px 10px;
   border: none;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 4px;
 }
 
